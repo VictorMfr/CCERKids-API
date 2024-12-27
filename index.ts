@@ -45,6 +45,7 @@ import getKidChronogram from "./classes/ExpressApp/Routes/Operation/KidChronogra
 import { set } from "mongoose";
 import setDrawback from "./classes/ExpressApp/Routes/Operation/KidChronogram/SetDrawback";
 import addScheduleDescription from "./classes/ExpressApp/Routes/Operation/KidChronogram/AddScheduleDescription";
+import signsOfLifeExpress from "./classes/ExpressApp/ConfigExpress/SignsOfLifeExpress";
 
 
 // Starting app
@@ -63,6 +64,7 @@ app.configApplication(new ConfigExpressSuperuser(Superuser, {
 }));
 
 app.configApplication(new ConfigExpressDatabase(mongoDB));
+app.configApplication(signsOfLifeExpress);
 
 // Entities
 const ESuperuser = new Entity('superuser', Superuser);
