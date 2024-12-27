@@ -49,7 +49,7 @@ import signsOfLifeExpress from "./classes/ExpressApp/ConfigExpress/SignsOfLifeEx
 
 
 // Starting app
-const app = new ExpressApp(process.env.PORT || 8000);
+const app = new ExpressApp(process.env.PORT as any || 8000);
 const dbServices = new DBAppServicesRegistration(Operation);
 
 // Configuring Application

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "ts index.ts",
     "test": "env-cmd -f ./config/dev.env nodemon index.ts",
     "init-data": "mongodb\\bin\\mongod.exe --dbpath mongodb-data"
   },
